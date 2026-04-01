@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navodaya Coaching Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1px;
+            text-align: center;
+        }
+        nav {
+            background: #34495e;
+            padding: 13px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 13px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding:30px;
+            margin: 45px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input, button {
+            padding: 8px;
+            margin: 10px;
+            width: 100%;
+        }
+        button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1a252f;
+        }
+        #dashboard {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Navodaya Coaching Center</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Fees</a>
+    <a href="#">Syllabus</a>
+    <a href="#">Notes</a>
+    <a href="#">Previous Papers</a>
+</nav>
+
+<div class="container">
+
+    <!-- Login Section -->
+    <div class="card" id="loginSection">
+        <h2>Student Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p id="error" style="color:red;"></p>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard">
+
+        <div class="card">
+            <h2>Student Details</h2>
+            <p><strong>Name:</strong> Srujan R</p>
+            <p><strong>Course:</strong> Navodaya Entrance Coaching</p>
+            <p><strong>Year:</strong> 2026</p>
+        </div>
+
+        <div class="card">
+            <h2>Fee Structure</h2>
+            <p>Total Fee: ₹20,000</p>
+            <p>Paid: ₹10,000</p>
+            <p>Remaining: ₹10,000</p>
+        </div>
+
+        <div class="card">
+            <h2>Syllabus</h2>
+            <ul>
+                <li>Mathematics</li>
+                <li>Reasoning</li>
+                <li>General Science</li>
+                <li>English</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Notes</h2>
+            <ul>
+                <li><a href="#">Math Notes PDF</a></li>
+                <li><a href="#">Science Notes PDF</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Previous Year Questions</h2>
+            <ul>
+                <li><a href="#">2023 Question Paper</a></li>
+                <li><a href="#">2024 Question Paper</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function login() {
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+
+        // Simple login validation
+        if(user === "admin" && pass === "1234") {
+            document.getElementById("loginSection").style.display = "none";
+            document.getElementById("dashboard").style.display = "block";
+        } else {
+            document.getElementById("error").innerText = "Invalid Credentials";
+        }
+    }
+</script>
+
+</body>
+</html>

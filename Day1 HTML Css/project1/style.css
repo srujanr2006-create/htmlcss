@@ -1,0 +1,104 @@
+body{
+    font-family: Arial ;
+    margin: 10px;
+    background-color: rgb(190, 192, 180);
+}
+nav{
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+
+    
+    
+}
+nav a{
+    color: white;
+    margin: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    
+}
+
+header{
+    background-color: rgb(85, 136, 230);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    margin: 30px;
+    text-align: center;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: rgb(249, 242, 242);
+    padding: 20px;
+    border: 1px solid black;
+    width: 25%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 10px;
+    margin: 20px;
+}
+.grid div{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px black;
+    
+}
+.about{
+background-color: aliceblue;
+text-align: center;
+box-shadow: 0 4px 8px black;
+margin: 10px;
+padding: 10px;
+}
+
+.form{
+    background-color: aliceblue;
+margin: 20px;
+padding: 20px;
+border-radius: 10px ;
+box-shadow: 0 4px 8px black;
+text-align: center;
+}
+
+@media (max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+}
+.card{
+    width: 100%;
+}
+.grid{
+    grid-template-columns: auto;
+}
+nav{
+    flex-direction: column;
+}
+
+
+
+nav a{
+    margin: auto;
+}
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
